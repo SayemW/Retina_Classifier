@@ -29,19 +29,19 @@ The process for extracting the optic disc take significant inspiration from [2].
 ## 2.1 Exudate detection
 Two methods are used to detect exudates. One using a logarithmic function and the other using the mean-shift algorithm. Each of the two test cases fail to detect the exudates in some cases and are hence combined to extract the exudates. 
 
-## 2.1.1 Exudate detection using a log function
+### 2.1.1 Exudate detection using a log function
 This process is based entirely upon [2]. The steps are as follows:
 1. The contrast of the green channel of the retina image is enhanced. The green channel provides the best contrast between the exudates and the rest of the image.
 2. The obtained image is exposed to logarithm function of various bases in order to further emphasize the exudates.
 3. The image is binarized by setting the pixels having maximum intensity to 1 and making the rest of the pixels be 0.
 4. The detected optic disk (1.2) is then removed for the resulting image.
 
-## 2.1.2 Exudate detection using mean-shift
+### 2.1.2 Exudate detection using mean-shift
 The following steps describe the algorithm used to extract the exudates using mean shift:
 1. Increase the contrast of the retina image.
 2. Run the mean-shift algorithms to segment the exudates and the background.
 
-## 2.1.3 Combine results
+### 2.1.3 Combine results
 The exudates extracted from the previous two methods are combined together to give an overall estimate of exudates in the retina image. The combination is done by considering only the overlapping exudate pixels in each method as the true exudates. The number of pixels covered by the exudates is then counted. This is used as the first feature in the classifier.
 
 ## 2.2 Red lesions detection
