@@ -59,14 +59,14 @@ Classification of images was done using a Discriminant Analysis classifier. The 
 
 ## 4. Results
 6-fold cross validation using the training set gave the following results:
--Sensitivity: 0.9444
--Specificity: 0.9444
--F-score: 0.9444
+- Sensitivity: 0.9444
+- Specificity: 0.9444
+- F-score: 0.9444
 
 Additionally, the trained classifier was used to predict the labels of 36 different images from the STARE database. Results are as follows:
--Sensitivity: 0.7778
--Specificity: 0.7222
--F-score: 0.7490
+- Sensitivity: 0.7778
+- Specificity: 0.7222
+- F-score: 0.7490
 
 ## 5. Areas of improvement
 The results may improve through additional preprocessing steps to mainly remove the intensity gradient in the retina images. Furthermore, better extraction of the blood vessels would improve optic disc elimination and red lesion detection. Finally, extraction of “cotton-wool” spots and abnormal vessel growth would help in better classification of unhealthy retina images.
