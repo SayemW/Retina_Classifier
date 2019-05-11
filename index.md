@@ -33,6 +33,7 @@ Two methods are used to detect exudates. One using a logarithmic function and th
 This process is based entirely upon [2]. The steps are as follows:
 1. The contrast of the green channel of the retina image is enhanced. The green channel provides the best contrast between the exudates and the rest of the image.
 2. The obtained image is exposed to logarithm function of various bases in order to further emphasize the exudates.
+![Log Function](https://github.com/SayemW/Retina_Classifier/blob/master/images/log_fun.png)
 3. The image is binarized by setting the pixels having maximum intensity to 1 and making the rest of the pixels be 0.
 4. The detected optic disk (1.2) is then removed for the resulting image.
 
