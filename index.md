@@ -13,7 +13,7 @@ The algorithm for extracting the blood vessels is given below:
 2. A median filter of size 25 is used on this image. The contrast enhanced image is then subtracted from the resulting image. 
 3. The image is then converted to binary by thresholding and then the resulting image is strengthened.
 4. The largest connected component of this image, which is the blood vessel, is extracted from the image.
-![BV](images/Vessel Ex.png)
+![BV](images/VE.png)
 ## 1.2 Localizing the optic disk
 The process for extracting the optic disc take significant inspiration from [2]. The algorithm for performing optic disk localization is given by the following steps:
 1. The green channel provides the best contrast between the optic disc and the background, therefore the green channel of the retina image is used. The contrast of the green channel is further enhanced.
