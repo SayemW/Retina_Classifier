@@ -87,6 +87,7 @@ The results may improve through additional preprocessing steps to mainly remove 
 
 [2] Zeljković, V., Bojic, M., Zhao, S., Tameze, C., & Valev, V. (2014). Exudates and optic disk detection in retinal images of diabetic patients. Concurrency and Computation: Practice and Experience, 27(1), 172-192. doi:10.1002/cpe.3215
 
+[3] “STructured Analysis of the Retina.” The STARE Project, cecas.clemson.edu/~ahoover/stare/.
 
 
 
