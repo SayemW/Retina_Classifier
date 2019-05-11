@@ -2,6 +2,7 @@
 
 **AIM:** The aim of this project was to develop an automatic system that could analyse digital color retina images to detect signs of diabetic retinopathy.
 ![Image of Retina](images/Diabetic-Retinopathy.jpg)
+
 **Method:** The process for automatic detection of diabetic retinopathy described here involves three parts.
 1. Localizing the optic disc and blood vessel extraction.
 2. Detecting exudates and red lesions (microaneurysms & hemorrhages).
@@ -13,6 +14,7 @@ The algorithm for extracting the blood vessels is given below:
 2. A median filter of size 25 is used on this image. The contrast enhanced image is then subtracted from the resulting image. 
 3. The image is then converted to binary by thresholding and then the resulting image is strengthened.
 4. The largest connected component of this image, which is the blood vessel, is extracted from the image.
+
 ![BV](images/VE.png)
 
 ## 1.2 Localizing the optic disk
@@ -25,6 +27,7 @@ The process for extracting the optic disc take significant inspiration from [2].
 6. The detected region of the original green channel is morphologically reconstructed.
 7. The resulting image is then subtracted from the original green channel image and is then binarized by thresholding.
 8. A median filter is used to remove noise and morphological dilation is performed.
+
 ![OD](images/ODremoval.png)
 
 ## 2.1 Exudate detection
@@ -37,12 +40,14 @@ This process is based entirely upon [2]. The steps are as follows:
 ![Log Function](images/log_fun.png)
 3. The image is binarized by setting the pixels having maximum intensity to 1 and making the rest of the pixels be 0.
 4. The detected optic disk (1.2) is then removed for the resulting image.
+
 ![EXU1](images/EX1.png)
 
 ### 2.1.2 Exudate detection using mean-shift
 The following steps describe the algorithm used to extract the exudates using mean shift:
 1. Increase the contrast of the retina image.
 2. Run the mean-shift algorithms to segment the exudates and the background.
+
 ![EXU2](images/EX2.png)
 
 ### 2.1.3 Combine results
@@ -57,6 +62,7 @@ The red lesions (hemorrhages and microaneurysms)  are extracted using the follow
 5. Filter the image components by specifying the general parameters of red lesions.
 6. Erode using a disk structure to remove noise.
 7. Calculate the pixels covered by the red lesions. This is used as the second feature of the classifier.
+
 ![RL](images/RL.png)
 
 ## 3. Classification
