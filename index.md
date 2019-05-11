@@ -18,7 +18,7 @@ The algorithm for extracting the blood vessels is given below:
 ![BV](images/VE.png)
 
 ## 1.2 Localizing the optic disk
-The process for extracting the optic disc take significant inspiration from [2]. The algorithm for performing optic disk localization is given by the following steps:
+The process for extracting the optic disc takes significant inspiration from [2]. The algorithm for performing optic disk localization is given by the following steps:
 1. The green channel provides the best contrast between the optic disc and the background, therefore the green channel of the retina image is used. The contrast of the green channel is further enhanced.
 2. The image is converted to binary by thresholding at 0.02% of the maximum image intensity value. The image is then eroded and then dilated with a disk 7 structure to remove unwanted noise.
 3. The remaining components are filtered based upon their roundness and size. Components that are too small or irregularly shaped are removed.
@@ -31,7 +31,7 @@ The process for extracting the optic disc take significant inspiration from [2].
 ![OD](images/ODremoval.png)
 
 ## 2.1 Exudate detection
-Two methods are used to detect exudates. One using a logarithmic function and the other using the mean-shift algorithm. Each of the two test cases fail to detect the exudates in some cases and are hence combined to extract the exudates. 
+Two methods are used to detect exudates. One using a logarithmic function and the other using the mean-shift algorithm. Each of the two methods fail to accurately detect the exudates in some cases and are hence combined to extract the exudates. 
 
 ### 2.1.1 Exudate detection using a log function
 This process is based entirely upon [2]. The steps are as follows:
@@ -51,7 +51,7 @@ The following steps describe the algorithm used to extract the exudates using me
 ![EXU2](images/EX2.png)
 
 ### 2.1.3 Combine results
-The exudates extracted from the previous two methods are combined together to give an overall estimate of exudates in the retina image. The combination is done by considering only the overlapping exudate pixels in each method as the true exudates. The number of pixels covered by the exudates is then counted. This is used as the first feature in the classifier.
+The exudates extracted from the previous two methods are combined together to give an overall estimate of exudates in the retina image. The combination is done by considering only the overlapping exudate pixels detected by each method as the true exudates. The number of pixels covered by the exudates is then counted. This is used as the first feature in the classifier.
 
 ## 2.2 Red lesions detection
 The red lesions (hemorrhages and microaneurysms)  are extracted using the following steps:
