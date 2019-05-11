@@ -66,7 +66,7 @@ The red lesions (hemorrhages and microaneurysms)  are extracted using the follow
 ![RL](images/RL.png)
 
 ## 3. Classification
-Classification of images was done using a Discriminant Analysis classifier. The classifier was trained on a set of 36 images from the STARE Database. 18 of these were healthy and 18 were diseased. 
+Classification of images was done using a Discriminant Analysis classifier. The classifier was trained on a set of 36 images from the STARE Database [3]. 18 of these were healthy and 18 were diseased. 
 
 ## 4. Results
 6-fold cross validation using the training set gave the following results:
@@ -74,7 +74,7 @@ Classification of images was done using a Discriminant Analysis classifier. The 
 - Specificity: 0.9444
 - F-score: 0.9444
 
-Additionally, the trained classifier was used to predict the labels of 36 different images from the STARE database. Results are as follows:
+Additionally, the trained classifier was used to predict the labels of 36 different images from the STARE database [3]. Results are as follows:
 - Sensitivity: 0.7778
 - Specificity: 0.7222
 - F-score: 0.7490
