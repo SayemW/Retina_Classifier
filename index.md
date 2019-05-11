@@ -46,7 +46,7 @@ This process is based entirely upon [2]. The steps are as follows:
 ### 2.1.2 Exudate detection using mean-shift
 The following steps describe the algorithm used to extract the exudates using mean shift:
 1. Increase the contrast of the retina image.
-2. Run the mean-shift algorithms to segment the exudates and the background.
+2. Run the mean-shift algorithm to segment the exudates and the background.
 
 ![EXU2](images/EX2.png)
 
