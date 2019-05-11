@@ -1,7 +1,7 @@
 # Diabetic Retinopathy Detection in Digital Fundus Images
 
 **AIM:** The aim of this project was to develop an automatic system that could analyse digital color retina images to detect signs of diabetic retinopathy.
-
+![Image of Retina](https://github.com/SayemW/Retina_Classifier/blob/master/images/Diabetic-Retinopathy.jpg)
 **Method:** The process for automatic detection of diabetic retinopathy described here involves three parts.
 1. Localizing the optic disc and blood vessel extraction.
 2. Detecting exudates and red lesions (microaneurysms & hemorrhages).
